@@ -86,7 +86,8 @@
     {"Time": 12.85,"Who":"Wave 1","Action": "WaveRise", "Amt": -1},
     {"Time": 12.85,"Who":"Wave 16","Action": "WaveRise", "Amt": -1},
 
-    {"Time": 20.1,"Who":"Row","Action": "SetY", "Amt": 0},
+    {"Time": 20.15,"Who":"Row","Action": "SetY", "Amt": 0},
+    {"Time": 20.15,"Who":"Row","Action": "Shake", "Amt": 0.34},
     {"Time": 20.5,"Who":"Row","Action": "SetY", "Amt": 10},
     {"Time": 20.5,"Who":"For","Action": "SetY", "Amt": 0},
     {"Time": 20.9,"Who":"For","Action": "SetY", "Amt": 10},
@@ -96,7 +97,18 @@
     {"Time": 22.8,"Who":"Lives","Action": "SetY", "Amt": 10},
 
     
+    {"Time": 6,"Anim": "SpinShoot"},
+    {"Time": 22.5,"Action": "MoveToX", "Amt": -5},
+    {"Time": 22.5,"Action": "MoveToY", "Amt": 2.5},
+    {"Time": 23,"Who":"Torch 1","Action": "Flash"},
+    {"Time": 26.5,"Action": "MoveToX", "Amt": 5},
+    {"Time": 26.5,"Action": "MoveToY", "Amt": 2.5},
+    {"Time": 27.5,"Who":"Torch 3","Action": "Flash"},
+    {"Time": 32,"Who":"Torch 5","Action": "Flash"},
+    {"Time": 41,"Who":"Torch 6","Action": "Flash"},
+    {"Time": 45,"Who":"Torch 4","Action": "Flash"},
+    {"Time": 50,"Who":"Torch 2","Action": "Flash"},
 
-    {"Time": 30,"Who":"Row","Dialogue": "dshdhfsh"}
+    {"Time": 66,"Who":"Row","Dialogue": "dshdhfsh"}
   ]
 }
