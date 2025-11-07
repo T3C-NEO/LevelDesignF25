@@ -8,6 +8,9 @@ public class NeoMonster : HazardController
 {
     public Rigidbody2D play;
     public GameObject baby;
+
+    public Sprite om;
+    public Sprite nom;
     public override void DoAction(string act, float amt = 0)
     {
         base.DoAction(act, amt);
@@ -34,6 +37,22 @@ public class NeoMonster : HazardController
         if (act == "Roam")
         {
             StartCoroutine(Roam());
+        }
+        if (act == "Fade")
+        {
+            StartCoroutine(Fade());
+        }
+        if (act == "Bite")
+        {
+            StartCoroutine(Bite(amt));
+        }
+        if (act == "MoveOverTime 1")
+        {
+            StartCoroutine(MoveOverTime(new Vector2(-5, 2.5f)));
+        }
+        if (act == "MoveOverTime 2")
+        {
+            StartCoroutine(MoveOverTime(new Vector2(5, 2.5f)));
         }
     }
 
@@ -215,7 +234,7 @@ public class NeoMonster : HazardController
         while (baby.activeInHierarchy)
         {
             //This works a lot like the FourSquare movement blocks, but it's just one
-            Vector3 endPos = new Vector3(Random.Range(-5.5f, 5.5f), Random.Range(-2.5f, 2.5f));
+            Vector3 endPos = new Vector3(Random.Range(-7f, 7f), Random.Range(-4f, 4f));
             while (Math.Abs(transform.position.x - endPos.x) > 0.5f && baby.activeInHierarchy)
             {
                 //Move a percentage of the way there each frame
@@ -225,6 +244,58 @@ public class NeoMonster : HazardController
                 transform.position = Vector3.MoveTowards(transform.position, endPos, 0.1f * Time.deltaTime);
                 yield return null;
             }
+        }
+    }
+
+    public IEnumerator Fade()
+    {
+        //I use this to track movement speed
+        float number = 1;
+        while (number > 0.9f)
+        {
+            number -= 0.05f * Time.deltaTime;
+            Body.color = new Color(0, 0, 0, number);
+            yield return null;
+        }
+    }
+
+    public IEnumerator MoveOverTime(Vector2 targetPosition)
+    {
+        Vector2 startPos = transform.position;
+        float elapsed = 0f;
+
+        while (elapsed < 0.3f)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / 0.3f);
+            transform.position = Vector2.Lerp(startPos, targetPosition, t);
+            yield return null;
+        }
+        // Ensure exact final position
+        transform.position = targetPosition;
+    }
+    public IEnumerator Bite(float numb)
+    {
+        if (numb == 1)
+        {
+            Body.sprite = nom;
+            transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            yield return null;
+        }
+        else if (numb == 2)
+        {
+            Body.sortingOrder = 4;
+        }
+        else if (numb == 0)
+        {
+            Body.sprite = om;
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            yield return null;
+        }
+        else
+        {
+            Body.sortingOrder = -3;
+
         }
     }
 }

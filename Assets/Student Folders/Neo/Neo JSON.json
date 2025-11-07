@@ -3,13 +3,26 @@
   "Author": "Neo",
   "Events": [
     {"Time": 0,"Action": "Shake", "Amt": 2},
+    {"Time": 0,"Who":"Head 1","Action": "HitboxOff"},
+    {"Time": 0,"Who":"Head 2","Action": "HitboxOff"},
+    {"Time": 0,"Who":"Head 3","Action": "HitboxOff"},
+    {"Time": 0,"Who":"Head 4","Action": "HitboxOff"},
+    {"Time": 0,"Who":"Head 5","Action": "HitboxOff"},
+    {"Time": 0,"Who":"Head 6","Action": "HitboxOff"},
     
+    {"Time": 1,"Who":"Head 1","Action": "Roam"},
+    {"Time": 1,"Who":"Head 2","Action": "Roam"},
+    {"Time": 1,"Who":"Head 3","Action": "Roam"},
+    {"Time": 1,"Who":"Head 4","Action": "Roam"},
+    {"Time": 1,"Who":"Head 5","Action": "Roam"},
+    {"Time": 1,"Who":"Head 6","Action": "Roam"},
+
+
 
     {"Time": 1.4,"Who":"Warning Horz","Action": "SetY", "Amt": -2.5},
     {"Time": 1.4,"Who":"Warning Horz","Action": "Flash"},
     {"Time": 1.9,"Who":"Warning Horz","Action": "SetY", "Amt": -10},
 
-    {"Time": 2,"Who":"Head 1","Action": "Roam"},
 
 
     {"Time": 2.1,"Who":"Wave 1","Action": "WaveRise", "Amt": 1},
@@ -273,13 +286,56 @@
 
     {"Time": 21.4,"Who":"Lives","Action": "SetY", "Amt": 0},
     {"Time": 21.4,"Who":"Lives","Action": "Shake", "Amt": 1.39},
-    {"Time": 21.75,"Who":"Torch 1","Action": "Flash"},
-    {"Time": 22.8,"Who":"Lives","Action": "SetY", "Amt": 10},
+    {"Time": 21.4,"Who":"Background","Action": "Fade"},
+
+    {"Time": 21.55,"Who":"Torch 1","Action": "Flash"},
+
+
 
     
-    {"Time": 23.5,"Action": "MoveToX", "Amt": 3},
-    {"Time": 23.5,"Action": "MoveToY", "Amt": 2.5},
+    {"Time": 22.2,"Who":"Head 1 Baby","Action": "TurnOff"},
+    {"Time": 22.2,"Who":"Head 1","Action": "MoveOverTime 1"},
+    
+    {"Time": 22.4,"Who":"Head 1","Action": "Bite", "Amt": 1},
+
+    {"Time": 22.5,"Who":"Head 1","Action": "HitboxOn"},
+    {"Time": 22.5,"Who":"Head 1","Action": "Bite", "Amt": 2},
+    
+    
+    {"Time": 22.7,"Who":"Head 1","Action": "Bite", "Amt": 0},
+    {"Time": 22.7,"Who":"Torch 1","Action": "TurnOff"},
+
+    
+    {"Time": 22.8,"Who":"Lives","Action": "SetY", "Amt": 10},
+    
+    {"Time": 23.2,"Who":"Head 1","Action": "Bite", "Amt": 4},
+    {"Time": 23.2,"Who":"Head 1","Action": "HitboxOff"},
+    {"Time": 23.2,"Who":"Head 1 Baby","Action": "TurnOn"},
+    
+    {"Time": 23.2,"Who":"Head 1","Action": "Roam"},
+
     {"Time": 26.1,"Who":"Torch 3","Action": "Flash"},
+
+    {"Time": 26.75,"Who":"Head 3 Baby","Action": "TurnOff"},
+    {"Time": 26.75,"Who":"Head 3","Action": "MoveOverTime 2"},
+    
+    {"Time": 26.95,"Who":"Head 3","Action": "Bite", "Amt": 1},
+
+    {"Time": 27.05,"Who":"Head 3","Action": "HitboxOn"},
+    {"Time": 27.05,"Who":"Head 3","Action": "Bite", "Amt": 2},
+    
+    
+    {"Time": 27.25,"Who":"Head 3","Action": "Bite", "Amt": 0},
+    {"Time": 27.25,"Who":"Torch 3","Action": "TurnOff"},
+    
+    {"Time": 27.75,"Who":"Head 3","Action": "Bite", "Amt": 4},
+    {"Time": 27.75,"Who":"Head 3","Action": "HitboxOff"},
+    {"Time": 27.75,"Who":"Head 3 Baby","Action": "TurnOn"},
+    
+    {"Time": 27.75,"Who":"Head 3","Action": "Roam"},
+
+
+
     {"Time": 30.79,"Who":"Torch 5","Action": "Flash"},
     {"Time": 40.46,"Who":"Torch 6","Action": "Flash"},
     {"Time": 44.45,"Who":"Torch 4","Action": "Flash"},
